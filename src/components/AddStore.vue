@@ -40,6 +40,7 @@ export default {
           this.formData
         );
         alert("가게등록 완료!");
+        this.$emit("update:openModal", false);
       } catch (error) {
         console.error("Error:", error);
         alert("가게 등록 중 문제가 발생했습니다.");
