@@ -45,8 +45,10 @@ export default {
           "http://localhost:8080/members",
           this.formData
         );
-        console.log("Response:", response.data);
         alert("회원가입이 완료되었습니다!");
+        if (response.data.ownername === this.formData.ownername) {
+          this.$router.push("/list");
+        }
       } catch (error) {
         console.error("Error:", error);
         alert("회원가입 중 문제가 발생했습니다.");
