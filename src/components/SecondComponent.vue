@@ -41,6 +41,7 @@ export default {
         console.log("Response:", response.data);
         if (response.data) {
           localStorage.setItem("ownername", this.formData.ownername);
+          localStorage.setItem("location", response.data.location);
           this.$router.push("/list");
         } else {
           alert("아이디 또는 비밀번호가 일치하지 않습니다.");
